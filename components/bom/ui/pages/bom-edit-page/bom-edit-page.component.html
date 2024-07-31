@@ -1,0 +1,15 @@
+<section>
+
+  <h2>Bom: {{current.id}}</h2>
+
+  <h3>Materials: </h3>
+
+  <div class="materials" *ngFor="let material of current.materials">
+    <div class="material">
+      <p>Id: {{material.id}}</p>
+      <p>Nombre: {{material.name}}</p>
+      <p>Cantidad: {{material.quantity}}</p>
+    </div>
+  </div>
+
+</section>

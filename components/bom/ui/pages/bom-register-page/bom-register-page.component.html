@@ -1,0 +1,21 @@
+
+<section>
+
+  <button (click)="appendItemForm()">Agregar material +</button>
+
+  <form [formGroup]="formGroup" >
+
+    <div formArrayName="materials" *ngFor="let gr of materials.controls; let i = index">
+
+      <div [formGroupName]="i" class="form-group">
+        <label >Id: </label>
+        <input type="text" [formControlName]="'identifier'">
+        <label >Cantidad: </label>
+        <input type="number" [formControlName]="'quantity'">
+      </div>
+    </div>
+
+    <button *ngIf="materials.length > 0" (click)="send()" >Enviar</button>
+  </form>
+
+</section>
