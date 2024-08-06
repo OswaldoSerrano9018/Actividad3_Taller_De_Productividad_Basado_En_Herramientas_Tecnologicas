@@ -1,0 +1,37 @@
+<section class="container mt-5">
+
+  <div class="toolbar mt-5">
+    <button (click)="appendItemForm()" mat-button mat-raised-button>Agregar material +</button>
+  </div>
+
+
+  <form [formGroup]="formGroup" class="mt-5">
+
+    <div *ngFor="let gr of materials.controls; let i = index" formArrayName="materials">
+
+      <table [formGroupName]="i" class="form-group">
+        <tr>
+          <td>
+            <mat-form-field>
+              <mat-label>Id:</mat-label>
+              <input [formControlName]="'id'" matInput type="text">
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field>
+              <mat-label>Cantidad:</mat-label>
+              <input [formControlName]="'quantity'" matInput type="number">
+            </mat-form-field>
+          </td>
+        </tr>
+
+      </table>
+    </div>
+
+    <div class="submit-button-wrapper mt-5">
+      <button (click)="send()" *ngIf="materials.length > 0" mat-button mat-raised-button>Enviar</button>
+    </div>
+
+  </form>
+
+</section>

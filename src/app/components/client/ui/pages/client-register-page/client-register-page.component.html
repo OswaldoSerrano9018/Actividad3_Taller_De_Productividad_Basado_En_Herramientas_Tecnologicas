@@ -1,0 +1,29 @@
+<section class="container mt-5">
+
+  <h1>Registrar cliente</h1>
+
+  <form [formGroup]="formGroup" class="mt-5">
+
+    <table>
+      <tr>
+        <td>
+          <mat-form-field class="form-group">
+            <mat-label>Nombre:</mat-label>
+            <input [formControlName]="'name'" matInput type="text">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="form-group">
+            <mat-label>Contacto:</mat-label>
+            <input [formControlName]="'contact'" matInput type="text">
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+
+    <button (click)="send()" mat-button mat-raised-button>Enviar</button>
+
+  </form>
+
+</section>

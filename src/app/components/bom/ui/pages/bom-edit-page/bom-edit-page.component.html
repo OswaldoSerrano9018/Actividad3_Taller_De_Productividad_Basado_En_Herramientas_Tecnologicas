@@ -1,0 +1,26 @@
+<section class="container mt-5">
+
+  <mat-card appearance="outlined" class="mt-5">
+
+    <mat-card-header class="mt-5">
+      <mat-card-title>Bom: {{ current.id }}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content class="mt-3">
+
+      <mat-card-subtitle class="mt-3">Materials:</mat-card-subtitle>
+
+      <div *ngFor="let material of current.materials" class="materials">
+        <div class="material">
+          <p>Id: {{ material.id }}</p>
+          <p>Nombre: {{ material.name }}</p>
+          <p>Cantidad: {{ material.quantity }}</p>
+        </div>
+      </div>
+
+    </mat-card-content>
+
+  </mat-card>
+
+
+</section>
